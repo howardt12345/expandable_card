@@ -154,7 +154,11 @@ class _ExpandableCardState extends State<ExpandableCard>
                   children: <Widget>[
                     if (widget.hasHandle) Handle(),
                     SizedBox(height: 10),
-                    ...widget.children
+                    SingleChildScrollView(
+                      child: Column(
+                        children: widget.children,
+                      ),
+                    ),
                   ],
                 ),
               ),

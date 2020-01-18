@@ -1,3 +1,4 @@
+import 'package:expandable_card/components/scroll_behavior.dart';
 import 'package:flutter/material.dart';
 
 import 'expandablecard.dart';
@@ -10,11 +11,14 @@ class ExpandableCardPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        page,
-        expandableCard
-      ],
+    return ScrollConfiguration(
+      behavior: NoGlowBehavior(),
+      child: Stack(
+        children: [
+          page,
+          expandableCard
+        ],
+      ),
     );
   }
 }
