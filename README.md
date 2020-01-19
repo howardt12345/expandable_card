@@ -22,7 +22,10 @@ This is a Flutter Widget that makes it easy to build a page with a bottom Card t
 - `bool hasHandle`: will add a little handle icon. Default is `true`
 - `List<Widget> Children`: Widgets that make the actual content of the card
 
+## Implemented: 
+- Add suport for scrolling card when its fully expanded
+
 ## Future Implementations:
 - `AnimatedExpandableCard`: will allow animation between closed state and expanded state.
-- Add suport for scrolling card when its fully expanded
+
     
