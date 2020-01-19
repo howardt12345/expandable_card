@@ -150,18 +150,14 @@ class _ExpandableCardState extends State<ExpandableCard>
               ),
               child: Padding(
                 padding: widget.padding,
-                child: Column(
-                  children: <Widget>[
-                    if (widget.hasHandle) Handle(),
-                    SizedBox(height: 10),
-                    Expanded(
-                      child: SingleChildScrollView(
-                        child: Column(
-                          children: widget.children,
-                        ),
-                      ),
-                    ),
-                  ],
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: <Widget>[
+                      if (widget.hasHandle) Handle(),
+                      SizedBox(height: 10),
+                      ...widget.children
+                    ],
+                  ),
                 ),
               ),
             ),
